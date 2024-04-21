@@ -14,8 +14,19 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #84aaed9e;
+  min-height: 5rem;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(7px + 2vmin);
+  /* color: white; */
+}
+
+.App-body {
+  background-color: #2d30359e;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +46,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+input {
+  font: inherit;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: .3rem;
+  border: none;
+  padding: .3rem .5rem;
+}
+
+input:focus {
+  outline: .2rem solid #1976d2;
+}
+
+button {
+  background-color: #1976d2;
+  border: none;
+  padding: .3rem .5rem;
+  border-radius: .3rem;
+
 }

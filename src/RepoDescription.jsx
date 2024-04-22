@@ -29,12 +29,44 @@ const RepoDescription = () => {
         fetchRepo()
     }, [])
 
-    console.log(repo)
+    const newData = {
+        name: 'new_repository_name', // New repository name
+        description: 'New description', // New repository description
+    };
+
+    const updateHandler = async () => {
+        const response = await axios.patch(apiUrl, newData, config)
+
+    }
     return <div style={{ height: '100vh' }}>
-    <header className='App-header'>{repoName}</header>
-    <div className='App-body'>
-        
-    </div>
+        <header className='App-header'>{repoName}</header>
+        <div className='App-body'>
+            <table>
+                <thead>
+                    <tr>
+                        <th>{repo.name}</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Star</td>
+                        <td>{repo.watchers}</td>
+                    </tr>
+                    <tr>
+                        <td>allow forking</td>
+                        <td>{repo.allow_forking && repo.allow_forking.toString()}</td>
+                    </tr>
+                    <tr>
+                        <td>default branch</td>
+                        <td>{repo.default_branch}</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+            <button onClick={updateHandler}>update</button>
+        </div>
     </div>
 }
 

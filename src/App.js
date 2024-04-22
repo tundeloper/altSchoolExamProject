@@ -26,7 +26,7 @@ function App() {
     <>
     <div className="App">
       <header className="App-header">
-        <p>Babatunde Repo </p>
+        <p>Babatunde  </p>
         {/* <a
           className="App-link"
           href="https://reactjs.org"

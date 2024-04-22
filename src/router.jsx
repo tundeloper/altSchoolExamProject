@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import AllRepos from "./AllRepos";
+import RepoDescription from "./RepoDescription";
 
 // import Loading from "./components/loading";
 
@@ -20,7 +21,7 @@ const BrowserRouter = createBrowserRouter([
         path: "/:repoName",
         element: (
             <Suspense fallback={<div>Loading</div>}>
-                <AllRepos />
+                <RepoDescription />
             </Suspense>
         ),
         errorElement: <div>Error 404</div>,

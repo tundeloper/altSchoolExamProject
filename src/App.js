@@ -4,6 +4,7 @@ import { Box, TextField } from '@mui/material';
 import PaginationOutlined from './components/pagination';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import ExamplePagination from './components/pagination';
 
 function App() {
   const [allReps, setAllRepos] = useState([])
@@ -52,9 +53,10 @@ function App() {
         <div>github</div>
       </header>
       <body className='App-body'>
-        <PaginationOutlined items={['Issa', 'Mubarak', 'Ibrahim', 'Rasak', 'Tunde', 'Aleem', 'Abdullah', 'Issa', 'Mubarak', 'Ibrahim', 'Rasak', 'Tunde', 'Aleem', 'Abdullah', 'Abdullah', 'Issa', 'Mubarak', 'Ibrahim', 'Rasak', 'Tunde', 'Aleem', 'Abdullah',]} />
+        <ExamplePagination items={['Issa', 'Mubarak', 'Ibrahim', 'Rasak', 'Tunde', 'Aleem', 'Abdullah', 'Issa', 'Mubarak', 'Ibrahim', 'Rasak', 'Tunde', 'Aleem', 'Abdullah', 'Abdullah', 'Issa', 'Mubarak', 'Ibrahim', 'Rasak', 'Tunde', 'Aleem', 'Abdullah',]} />
       </body>
     </div>
+    
     </>
   );
 }

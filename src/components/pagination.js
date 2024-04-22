@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {
@@ -33,13 +34,13 @@ const ExamplePagination = ({ items }) => {
       </Typography> */}
       <ul style={{ listStyle: 'none', height: '25rem', width: '20rem' }}>
         {displayedItems.map((item, index) => (
-          <a href={`/${item}`} style={{ textDecoration: 'none', color: 'inherit' }}><li key={index} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'green', padding: '1rem', marginBottom: '1rem' }}>
+          <Link to={`/${item}`} style={{ textDecoration: 'none', color: 'inherit' }}><li key={index} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'green', padding: '1rem', marginBottom: '1rem' }}>
             <div>{item}</div>
             <div>
               star 1
             </div>
           </li>
-          </a>
+          </Link>
         ))}
       </ul>
       <Stack spacing={2} justifyContent="center" fontWeight='bold'>

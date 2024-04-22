@@ -3,8 +3,6 @@ import ExamplePagination from "./components/pagination"
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// const token = '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'
-
 const config = {
     headers: {
       Authorization: `token ${token}`,

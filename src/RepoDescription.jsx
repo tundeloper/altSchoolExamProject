@@ -3,7 +3,6 @@ import './App.css';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-// const token = 'github_pat_11AQMLAMY0qrQWeIyhLjg_UsKfTQf32hpicbwRDBp1YRTKjRhm1lVHYl7b14nFVC4BQNG4B7QQQTZ1Sq7'
 
 const config = {
     headers: {

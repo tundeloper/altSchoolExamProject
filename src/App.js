@@ -12,7 +12,7 @@ function App() {
     const fetchRepo = async () => {
       try {
         const response = await axios.get('api.github.com/users/tundeloper/repos')
-        console.log(response.data)
+        console.log(response.data, )
         // setAllRepos((fetched))
         throw Error('no fetched data')
       } catch (error) {
@@ -20,7 +20,7 @@ function App() {
       }
     }
     return fetchRepo
-  }, [allReps])
+  }, [])
 
   return (
     <>

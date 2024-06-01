@@ -3,7 +3,7 @@ import ExamplePagination from "./components/pagination"
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// const token = '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'
+const token = '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'
 
 const config = {
     headers: {
@@ -20,7 +20,7 @@ const AllRepos = () => {
     useEffect(() => {
       async function fetchRepo() {
         try {
-           const response = await axios.get(apiUrl)
+           const response = await axios.get(apiUrl, config)
            setAllRepos(response.data)
         } catch (error) {
           console.log(error)

@@ -3,7 +3,7 @@ import ExamplePagination from "./components/pagination"
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const token = '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'
+// const token = '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'
 
 const config = {
     headers: {
@@ -13,14 +13,14 @@ const config = {
   const apiUrl = 'https://api.github.com/users/tundeloper/repos'
 
 const AllRepos = () => {
-    const [allRepos, setAllRepos] = useState([])
+    const [allRepos, setAllRepos] = useState([{name: 'react router'}, {name: 'nextjs'}, {name: 'shopify'}, {name: 'react Native'},{name: 'react router'}, {name: 'nextjs'}, {name: 'shopify'}, {name: 'react Native'},])
     const [searchVal, setSearchVal] = useState('')
     const [pressed, setIsPressed] = useState(false)
 
     useEffect(() => {
       async function fetchRepo() {
         try {
-           const response = await axios.get(apiUrl, config)
+           const response = await axios.get(apiUrl)
            setAllRepos(response.data)
         } catch (error) {
           console.log(error)
@@ -31,7 +31,6 @@ const AllRepos = () => {
 
     const handler = (event) => {
         setSearchVal(event.target.value)
-        setIsPressed(false)
     }
 
     const clearHandler = () => {
@@ -45,7 +44,7 @@ const AllRepos = () => {
   }
     return <div className="App">
         <header className="App-header">
-            <p>Babatunde repo</p>
+            <p>Babatunde repos</p>
             <div>
                 <input placeholder='search repository' value={searchVal} onChange={handler} />
                 <button onClick={clearHandler}>Clear</button>

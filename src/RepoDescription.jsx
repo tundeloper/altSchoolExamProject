@@ -13,6 +13,7 @@ const config = {
 
 const RepoDescription = () => {
     const { repoName } = useParams()
+    console.log(repoName)
     const [repo, setRepo] = useState([])
     const apiUrl = `https://api.github.com/repos/tundeloper/${repoName}`
 

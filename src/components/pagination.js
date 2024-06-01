@@ -7,6 +7,26 @@ const itemsPerPage = 5;
 const ExamplePagination = ({ items, searchVal, submit }) => {
   //   const classes = useStyles();
   const [page, setPage] = useState(1);
+  const [toggle, setToggle] = useState(false)
+
+  const toggleModal = () => {
+    setToggle(prev => !prev)
+  }
+  // console.log(toggle)
+  if(toggle) {
+    return  <div style={{width:'70vh', zIndex: 100, background: 'black', padding:'1rem 1rem'}}>
+      <div>
+        <form>
+        <input style={{width: '10rem', margin: '1rem'}} placeholder='Repo name'></input>
+        <input style={{width: '10rem'}} placeholder='Repo name'></input>
+        <input style={{width: '10rem',  margin: '1rem'}} placeholder='Repo name'></input>
+        <input style={{width: '10rem'}} placeholder='Repo name'></input>
+        <button style={{width: '85%'}} type='submit'>Submit</button>
+        </form>
+        </div>
+      <button style={{color: 'white', background: 'red'}} onClick={toggleModal}>close</button>
+    </div>
+  }
 
   const handleChange = (event, value) => {
     setPage(value);
@@ -56,7 +76,7 @@ const ExamplePagination = ({ items, searchVal, submit }) => {
           color="primary"
         />
       </Stack>
-      {/* <button>create repo</button> */}
+      <button onClick={toggleModal}>create repo</button>
     </div>
   );
 };

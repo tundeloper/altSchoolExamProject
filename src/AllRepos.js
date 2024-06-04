@@ -3,7 +3,7 @@ import ExamplePagination from "./components/pagination"
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const token = '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'
+const token = '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'
 
 const config = {
     headers: {

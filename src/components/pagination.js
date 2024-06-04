@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import CreateRepo from './createRepo';
 
 const itemsPerPage = 5;
 
@@ -14,18 +15,7 @@ const ExamplePagination = ({ items, searchVal, submit }) => {
   }
   // console.log(toggle)
   if(toggle) {
-    return  <div style={{width:'70vh', zIndex: 100, background: 'black', padding:'1rem 1rem'}}>
-      <div>
-        <form>
-        <input style={{width: '10rem', margin: '1rem'}} placeholder='Repo name'></input>
-        <input style={{width: '10rem'}} placeholder='Repo name'></input>
-        <input style={{width: '10rem',  margin: '1rem'}} placeholder='Repo name'></input>
-        <input style={{width: '10rem'}} placeholder='Repo name'></input>
-        <button style={{width: '85%'}} type='submit'>Submit</button>
-        </form>
-        </div>
-      <button style={{color: 'white', background: 'red'}} onClick={toggleModal}>close</button>
-    </div>
+    return  <CreateRepo toggle={toggleModal}/>
   }
 
   const handleChange = (event, value) => {
@@ -52,6 +42,7 @@ const ExamplePagination = ({ items, searchVal, submit }) => {
   </li>
   </a>
   } else {
+
     Render = displayedItems.map((item, index) => (
       <a href={`/${item.name}`} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
         <li style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'green', padding: '1rem', marginBottom: '1rem' }}>
@@ -59,7 +50,7 @@ const ExamplePagination = ({ items, searchVal, submit }) => {
       </li>
       </a>
     ))
-  }
+  } 
 
 
   return (

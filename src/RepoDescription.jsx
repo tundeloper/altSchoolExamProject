@@ -3,7 +3,7 @@ import './App.css';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const token = ''
+const token = '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'
 
 const config = {
     headers: {

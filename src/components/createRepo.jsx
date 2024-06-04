@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react"
 
 function CreateRepo ({toggle}) {
-    const token = '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'
+    const token = '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'
 
     const config = {
         headers: {

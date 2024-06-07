@@ -2,14 +2,14 @@ import axios from "axios";
 import { useState } from "react"
 
 function CreateRepo ({toggle}) {
-    const token = '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'
+    const token = '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'
 
     const config = {
         headers: {
           Authorization: `token ${token}`,
         },
       };
-      const apiUrl = 'https://api.github.com/users/tundeloper/repos'
+      const apiUrl = 'https://api.github.com/tundeloper/repos'
     
     const [repoName, setRepoName] = useState('')
     const [desc, setdesc] = useState('')

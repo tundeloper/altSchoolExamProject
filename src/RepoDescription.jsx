@@ -3,7 +3,7 @@ import './App.css';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const token = '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'
+const token = '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'
 
 const config = {
     headers: {
@@ -21,7 +21,8 @@ const RepoDescription = () => {
     useEffect(() => {
         async function fetchRepo() {
             try {
-                const response = await axios.get(apiUrl, config)
+                const response = await axios.get(apiUrl)
+                console.log(response)
                 setRepo(response.data)
             } catch (error) {
                 console.log(error)
@@ -36,7 +37,7 @@ const RepoDescription = () => {
     };
 
     const updateHandler = async () => {
-        const response = await axios.patch(apiUrl, newData, config)
+        // const response = await axios.patch(apiUrl, newData, config)
 
     }
     return <div style={{ height: '100vh' }}>

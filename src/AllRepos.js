@@ -13,14 +13,14 @@ const config = {
   const apiUrl = 'https://api.github.com/users/tundeloper/repos'
 
 const AllRepos = () => {
-    const [allRepos, setAllRepos] = useState([{name: 'react router'}, {name: 'nextjs'}, {name: 'shopify'}, {name: 'react Native'},{name: 'react router'}, {name: 'nextjs'}, {name: 'shopify'}, {name: 'react Native'},])
+    const [allRepos, setAllRepos] = useState([{name: 'Loading Repositories'},])
     const [searchVal, setSearchVal] = useState('')
     const [pressed, setIsPressed] = useState(false)
 
     useEffect(() => {
       async function fetchRepo() {
         try {
-           const response = await axios.get(apiUrl, config)
+           const response = await axios.get(apiUrl)
            console.log(response)
            setAllRepos(response.data)
         } catch (error) {
